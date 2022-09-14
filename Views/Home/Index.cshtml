@@ -2,6 +2,114 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model HomeVM
+
+<!--SLIDER START-->
+<div class="slider">
+    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="slider-shop" data-source="gallery" style="background:rgba(255,255,255,0);padding:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
+        <div id="rev_slider_1_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+            <ul>
+
+                @foreach (var item in Model.Sliders)
+                {
+                    <!-- SLIDE  -->
+                    <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="assets/100x50_44515-slider-bg-3.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide 3" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="~/shop//img/@item.ImageUrl" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="slider-image" data-no-retina>
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+                             id="slide-3-layer-1"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['-120','-115','-114','-114']"
+                             data-fontsize="['16','14','14','14']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-type="text"
+                             data-responsive_offset="on"
+                             data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+                             style="z-index: 5; white-space: nowrap; font-size: 16px; line-height: 22px; font-weight: 500; color: #eaeaef;font-family:'Poppins', sans-serif;">@item.HeaderTitle </div>
+
+                            <!-- LAYER NR. 12 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-3"
+                                 id="slide-3-layer-2"
+                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['-52','-52','-52','-52']"
+                                 data-fontsize="['60','60','50','40']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-type="text"
+                                 data-responsive_offset="on"
+                                 data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+                                 style="z-index: 6; white-space: nowrap; font-size: 60px; line-height: 16px; font-weight: 500; color: #ffffff; letter-spacing: 0px;font-family:'Poppins', sans-serif;">@item.MainTitle</div>
+
+                                <!-- LAYER NR. 13 -->
+                                <div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+                                     id="slide-3-layer-3"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['5','5','5','5']"
+                                     data-fontsize="['18','18','16','16']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-type="text"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                                     data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]"
+                                     data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]"
+                                     style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 22px; font-weight: 400; color: #eaeaef; font-family:'Poppins', sans-serif;">@item.SubTitle </div>
+
+                                    @if (item.ReadMoreLink != null)
+                                    {
+                                        <div class="tp-caption rev-btn  rs-parallaxlevel-2"
+                                             id="slide-3-layer-4"
+                                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                             data-y="['middle','middle','middle','middle']" data-voffset="['82','82','73','70']"
+                                             data-width="none"
+                                             data-height="none"
+                                             data-whitespace="nowrap"
+                                             data-type="text"
+                                             data-responsive_offset="on"
+                                             data-responsive="off"
+                                             data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                                             data-paddingtop="[0,0,0,0]"
+                                             data-paddingright="[0,0,0,0]"
+                                             data-paddingbottom="[0,0,0,0]"
+                                             data-paddingleft="[0,0,0,0]"
+                                             style="z-index: 11; max-width:960px; white-space: nowrap; font-size: 12px; line-height: 22px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                            <a href="@item.ReadMoreLink" class="btn white-trans-btn-with-white-border"> READ MORE</a>
+                                        </div>
+                                    }
+
+                                </li>
+
+                                <!-- SLIDE  -->
+
+                            }
+
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+    </div><!-- END REVOLUTION SLIDER -->
+</div>
+<!--SLIDER END-->
 <!-- START PORTOLIO SECTION -->
 <div class="portfolio-section">
     <div class="container">
@@ -31,124 +139,108 @@
             <div class="col-12">
                 <div id="js-grid-blog-posts" class="cbp">
 
-                    <div class="cbp-item CausalShirts others wow slideInUp">
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p24.jpg" class="cbp-caption" data-fancybox="gallery1" data-title="Shirt Name"><img src="shop/img/product-listing/p24.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p25.jpg" class="cbp-caption" data-fancybox="gallery1" data-title="Shirt Name"><img src="shop/img/product-listing/p25.jpg" alt=""></a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Light Wear </a>
+                    @foreach (var item in Model.Products)
+                    {
+                        <div class="cbp-item CausalShirts others wow slideInUp">
+                            <a class="portfolio-circle-cart" href="~/shop/shop-cart.html">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                            <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
+                                <div class="item"> <a href="~/shop/img/product-listing/p24.jpg" class="cbp-caption" data-fancybox="gallery1" data-title="Shirt Name"><img src="~/shop/img/@item.ImageUrl" alt=""></a></div>
+                                <div class="item"> <a href="~/shop/img/product-listing/p25.jpg" class="cbp-caption" data-fancybox="gallery1" data-title="Shirt Name"><img src="~/shop/img/@item.ImageUrl" alt=""></a></div>
                             </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cbp-item formalShirts CausalShirts wow slideInUp">
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p26.jpg" class="cbp-caption" data-fancybox="gallery2" data-title="Shirt Name"> <img src="shop/img/product-listing/p26.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p27.jpg" class="cbp-caption" data-fancybox="gallery2" data-title="Shirt Name"><img src="shop/img/product-listing/p27.jpg" alt=""></a></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Light Wear </a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a href="~/shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">@item.Name</a>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <div class="cbp-l-grid-blog-desc portfolio-des">$@item.Price</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
 
-                    <div class="cbp-item CausalShirts others wow slideInUp">
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p30.jpg" class="cbp-caption" data-fancybox="gallery3" data-title="Shirt Name"> <img src="shop/img/product-listing/p30.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p31.jpg" class="cbp-caption" data-fancybox="gallery3" data-title="Shirt Name"><img src="shop/img/product-listing/p31.jpg" alt=""></a></div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Light Wear </a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="cbp-item formalShirts CausalShirts wow slideInUp">
+                    @*<div class="cbp-item formalShirts CausalShirts wow slideInUp">
+            <a class="portfolio-circle-cart" href="~/shop/shop-cart.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+            <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
+                <div class="item"> <a href="~/shop/img/product-listing/p26.jpg" class="cbp-caption" data-fancybox="gallery2" data-title="Shirt Name"> <img src="~/shop/img/product-listing/p26.jpg" alt=""></a></div>
+                <div class="item"> <a href="~/shop/img/product-listing/p27.jpg" class="cbp-caption" data-fancybox="gallery2" data-title="Shirt Name"><img src="~/shop/img/product-listing/p27.jpg" alt=""></a></div>
+            </div>
 
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="~/shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Light Wear </a>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p28.jpg" class="cbp-caption" data-fancybox="gallery4" data-title="Shirt Name"> <img src="shop/img/product-listing/p28.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p29.jpg" class="cbp-caption" data-fancybox="gallery4" data-title="Shirt Name"><img src="shop/img/product-listing/p29.jpg" alt=""></a></div>
-                        </div>
+        <div class="cbp-item CausalShirts others wow slideInUp">
+            <a class="portfolio-circle-cart" href="~/shop/shop-cart.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+            <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
+                <div class="item"> <a href="~/shop/img/product-listing/p30.jpg" class="cbp-caption" data-fancybox="gallery3" data-title="Shirt Name"> <img src="~/shop/img/product-listing/p30.jpg" alt=""></a></div>
+                <div class="item"> <a href="~/shop/img/product-listing/p31.jpg" class="cbp-caption" data-fancybox="gallery3" data-title="Shirt Name"><img src="~/shop/img/product-listing/p31.jpg" alt=""></a></div>
+            </div>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Long Frock</a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="~/shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Light Wear </a>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="cbp-item motion CausalShirts wow slideInUp">
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
+        <div class="cbp-item formalShirts CausalShirts wow slideInUp">
 
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p34.jpg" class="cbp-caption" data-fancybox="gallery5" data-title="Shirt Name"> <img src="shop/img/product-listing/p34.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p35.jpg" class="cbp-caption" data-fancybox="gallery5" data-title="Shirt Name"><img src="shop/img/product-listing/p35.jpg" alt=""></a></div>
-                        </div>
+            <a class="portfolio-circle-cart" href="~/shop/shop-cart.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Casual Wear </a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
-                            </div>
-                        </div>
+            <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
+                <div class="item"> <a href="~/shop/img/product-listing/p28.jpg" class="cbp-caption" data-fancybox="gallery4" data-title="Shirt Name"> <img src="~/shop/img/product-listing/p28.jpg" alt=""></a></div>
+                <div class="item"> <a href="~/shop/img/product-listing/p29.jpg" class="cbp-caption" data-fancybox="gallery4" data-title="Shirt Name"><img src="~/shop/img/product-listing/p29.jpg" alt=""></a></div>
+            </div>
 
-                    </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="~/shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Long Frock</a>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="cbp-item formalShirts CausalShirts wow slideInUp">
-                        <a class="portfolio-circle-cart" href="shop/shop-cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
+        <div class="cbp-item motion CausalShirts wow slideInUp">
+            <a class="portfolio-circle-cart" href="~/shop/shop-cart.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
 
-                        <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            <div class="item"> <a href="shop/img/product-listing/p32.jpg" class="cbp-caption" data-fancybox="gallery6" data-title="Shirt Name"> <img src="shop/img/product-listing/p32.jpg" alt=""></a></div>
-                            <div class="item"> <a href="shop/img/product-listing/p33.jpg" class="cbp-caption" data-fancybox="gallery6" data-title="Shirt Name"><img src="shop/img/product-listing/p33.jpg" alt=""></a></div>
-                        </div>
+            <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
+                <div class="item"> <a href="~/shop/img/product-listing/p34.jpg" class="cbp-caption" data-fancybox="gallery5" data-title="Shirt Name"> <img src="~/shop/img/product-listing/p34.jpg" alt=""></a></div>
+                <div class="item"> <a href="~/shop/img/product-listing/p35.jpg" class="cbp-caption" data-fancybox="gallery5" data-title="Shirt Name"><img src="~/shop/img/product-listing/p35.jpg" alt=""></a></div>
+            </div>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Casual Wear </a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="~/shop/product-detail.html" target="_blank" class="cbp-l-grid-blog-title portfolio-title">Casual Wear </a>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="cbp-l-grid-blog-desc portfolio-des">$999.00</div>
+                </div>
+            </div>
 
-                    </div>
+        </div>*@
 
                 </div>
             </div>
@@ -190,8 +282,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l1.jpg" data-fancybox="lastest_product" data-title="Shirt Name">
-                                    <img src="shop/img/l1.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l1.jpg" data-fancybox="lastest_product" data-title="Shirt Name">
+                                    <img src="~/shop/img/l1.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -212,8 +304,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l7.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l7.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l7.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l7.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -234,8 +326,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l8.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l8.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l8.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l8.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -256,8 +348,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l9.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l9.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l9.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l9.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -278,8 +370,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l10.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l10.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l10.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l10.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -300,8 +392,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l11.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l11.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l11.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l11.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -322,8 +414,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l12.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l12.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l12.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l12.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -344,8 +436,8 @@
                         <div class="card">
                             <span class="product-type">NEW</span>
                             <div class="image-holder">
-                                <a href="shop/img/l7.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
-                                    <img src="shop/img/l13.jpg" class="card-img-top" alt="Lastest Arrivals 1">
+                                <a href="~/shop/img/l7.jpg" data-fancybox="lastest_product" data-title="Lastest Arrivals 1">
+                                    <img src="~/shop/img/l13.jpg" class="card-img-top" alt="Lastest Arrivals 1">
                                 </a>
                             </div>
                             <div class="card-body">

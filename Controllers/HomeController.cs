@@ -1,5 +1,6 @@
 ﻿using back_homework_12._09._2022.DAL;
 using back_homework_12._09._2022.Models;
+using back_homework_12._09._2022.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,13 +15,18 @@ namespace back_homework_12._09._2022.Controllers
     {
         ShopContext _context { get; }
 
-        HomeController(ShopContext context) {
+        public HomeController(ShopContext context) {
             _context = context;
         }
         public IActionResult Index()
         {
-            List<Slider> sliders = _context.Sliders.ToList();
-            return View(sliders);
+            HomeVM homeVM = new HomeVM
+            {
+                Sliders = _context.Sliders.ToList(),
+                Products = _context.Products.ToList()
+            };
+
+            return View(homeVM);
         }
         
     }
